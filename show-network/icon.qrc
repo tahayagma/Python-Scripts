@@ -1,0 +1,9 @@
+<RCC>
+	<qresource prefix = "newPrefix">
+	  <file>network.png</file>
+	  <file>git.jpg</file>
+	  <file>face.png</file>
+	</qresource>
+</RCC>
+	
+	
