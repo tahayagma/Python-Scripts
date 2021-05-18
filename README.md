@@ -1,2 +1,2 @@
 # Python-Scripts
-Basic scripts wtih python
+Basic scripts with python
