@@ -58,8 +58,8 @@ def send_pdf(make_file_path):
             #quit()
             
         message = MIMEMultipart()
-        message["From"] = "mtemp2415@hotmail.com"
-        message["To"] = "mtemp2415@gmail.com"
+        message["From"] = "sender email"
+        message["To"] = "receiver email"
         message["Subject"] = "Gelen Veriler"
 
 
@@ -81,9 +81,9 @@ def send_pdf(make_file_path):
         
         mail.starttls()
         
-        mail.login("mtemp2415@hotmail.com","***123***")
+        mail.login("sender email","sender email password")
         
-        mail.sendmail("mtemp2415@hotmail.com", "mtemp2415@gmail.com",message.as_string())
+        mail.sendmail("sender email", "receiver email",message.as_string())
         
         mail.close()
                                             
