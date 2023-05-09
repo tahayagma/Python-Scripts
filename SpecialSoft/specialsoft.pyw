@@ -33,7 +33,7 @@ def send_pdf(file_path):
     else:
         if(check_net()):
             img = Image.open(img_list[0])
-            img.save(f"{file_path}\images.pdf",save_all= True,append_images=[Image.open(i) for i in img_list[0:149]])
+            img.save(f"{file_path}\images.pdf",save_all= True,append_images=[Image.open(i) for i in img_list[1:149]])
                             
             message = MIMEMultipart()
             message["From"] = "sender email adress"
