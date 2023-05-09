@@ -1,9 +1,0 @@
-python 3.8.8 amd64 interepter
-( Download : https://www.python.org/ftp/python/3.8.8/python-3.8.8-amd64.exe)
-
-
-packages:
-
-PIL->8.3.1 version (pip install Pillow==8.3.1)
-
-
